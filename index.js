@@ -8,6 +8,7 @@ const caseRoute = require('./Routes/case');
 const session = require('express-session');
 const bodyParser=require("body-parser");
 const MongoStore = require('connect-mongo')(session);
+const  compression = require('compression');
 dotenv.config();
 
 mongoose.set('useFindAndModify', false);
@@ -21,7 +22,7 @@ mongoose.connect(process.env.DB_CONNECT,
 
 
 app.use(express.json());
-
+app.use(compression());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
