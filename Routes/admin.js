@@ -77,5 +77,15 @@ app.get('/caseinfo',verifyAdminToken,async (req,res)=>{
         }
 });
 
+app.get('/adminlogout',verifyAdminToken,async (req,res)=>{
+    req.session.destroy(err =>{
+        if(err){
+            return res.redirect('/adminhome');
+        }
+        res.clearCookie('sid');
+        res.redirect('/adminlogin');
+    });
+});
+
 
 module.exports=app;
