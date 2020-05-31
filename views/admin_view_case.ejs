@@ -1,199 +1,234 @@
 <!DOCTYPE html>
+
 <head>
-<title>Admin View</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    <link rel="icon" href="img/title-logo.png" type="image/png">
+    <title>Admin View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link rel="stylesheet" type="text/css" href="./style.css">
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="css/bootstrap.min.css" >
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="css/adminstyle.css" rel='stylesheet' type='text/css' />
-<!-- <link href="css/style-responsive.css" rel="stylesheet"/> -->
-<!-- font CSS -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font.css" type="text/css"/>
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<script src="js/jquery2.0.3.min.js"></script>
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link href="css/adminstyle.css" rel='stylesheet' type='text/css' />
+    <!-- <link href="css/style-responsive.css" rel="stylesheet"/> -->
+    <!-- font CSS -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="js/jquery2.0.3.min.js"></script>
 </head>
+
 <body>
-<section id="container">
-<!--header start-->
-<header class="header fixed-top clearfix">
-<!--logo start-->
-<div class="brand">
-
-    <a href="#" class="logo">
-        PORTA
-    </a>
-    <div class="sidebar-toggle-box">
-        <div class="fa fa-bars"></div>
-    </div>
-</div>
-<!--logo end-->
-
-<div class="top-nav clearfix">
-    <!--search & user info start-->
-    <ul class="nav pull-right top-menu">
-        <!-- user login dropdown start-->
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/2.png">
-                <span class="username">Muzaffar</span>
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu extended logout">
-              <li><a href="/adminchangepass"><i class="fa fa-key"></i>Change Password</a></li>
-              <li><a href="/adminlogout"><i class="fa fa-key"></i> Log Out</a></li>
-            </ul>
-        </li>
-        <!-- user login dropdown end -->
-       
-    </ul>
-    <!--search & user info end-->
-</div>
-</header>
-<!--header end-->
-<!--sidebar start-->
-<aside>
-    <div id="sidebar" class="nav-collapse">
-        <div class="leftside-navigation">
-            <ul class="sidebar-menu" id="nav-accordion">
-                <li>
-                  <a href="/adminhome">
-                    <span>Statistics</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="/allagents">
-                        <span>Agent Information</span>
+    <section id="container">
+        <!--header start-->
+        <header class="header fixed-top clearfix">
+            <!--logo start-->
+            <div class="brand">
+                <div class="mt-1 ml-3">
+                    <a href="adminhome.ejs">
+                        <img src="img/logo1.png">
                     </a>
-                </li>
+                </div>
+                <div class="sidebar-toggle-box">
+                    <div class="fas fa-bars"></div>
+                </div>
+            </div>
+            <!--logo end-->
 
-                <li>
-                    <a href="/caseinfo">
-                        <span>Cases</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</aside>
-<!--sidebar end-->
-<!--main content start-->
-<section id="main-content">
-	<section class="wrapper">
-		<div class="table-agile-info">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      case
-    </div>
-  </div>
-    <!-- <div class="table-responsive container"> -->
-      <div class="container-fluid mt-5">
-        <div class=" mr-auto">
-          <h3>Status: <%= clientCase.Status %></h3>
-          <br>
-          <div class="profile" style="background-color: white;">
-          <div class="border1">
-            
-            <h2><u>Client Information</u>:</h2>
-            <br>
-            <h4>Client 1: &ensp; </h4><%= clientCase.name1 %> <br> <br>
-            <h4>Client 2: &ensp; </h4><%= clientCase.name2 %> <br> <br>
-            <h4>DOB: &ensp; </h4><%= clientCase.DOB %> <br> <br>
-            <h4>Policy Name: &ensp; </h4><%= clientCase.Policy %> <br> <br>
-            <h4>Policy amount: &ensp; </h4><%= clientCase.Amount %> <br> <br>
-            <h4>Address: &ensp; </h4><%= clientCase.Address %> <br> <br>
-            <h4>Phone#: &ensp; </h4><%= clientCase.PhoneNo %> <br> <br>
-            <h4>Schedule Date: &ensp; </h4><%= clientCase.ScheduledDate %> <br> <br>
-            <h4>Time: &ensp; </h4><%= clientCase.Time %> <br> <br>
-            <h4>Requirements:</h4>
-            <div style="padding-left: 3%;">
-            <ul>
-              <li>1. <%= clientCase.value1 %></li>
-              <li>2. <%= clientCase.value2 %></li>
-              <li>3. <%= clientCase.value3 %></li>
-              <li>4. <%= clientCase.value4 %></li>
-              <li>5. <%= clientCase.value5 %></li>
-            </ul>
-            </div>
-          <!-- <button type="button1" class="btn btn-primary">Edit profile</button> -->
-        </div>
-          </div>
-          <form action="/<%= clientCase._id%>" method="POST">
-          <br>
-            <!-- <div class="btn-group"> -->
-              <div class="col-sm-1">
-              <input name="Status" hidden value="Pending" type="text">
-              <input name="Checker" hidden value="1" type="text">
-              <button type="submit" class="btn btn-primary">Pending</button>
-              </div>
-          </form>
-            <form action="/<%= clientCase._id%>" method="POST">
-              <div class="col-sm-1">
-              <input hidden name="Status" value="Ongoing" type="text">
-              <input hidden value="1" name="Checker" type="text">
-              <button type="submit" class="btn btn-primary">OnGoing</button>
-              </div>
-            </form>
-            <form action="/<%= clientCase._id%>" method="POST">
-              <div class="col-sm-1">
-              <input hidden name="Status" value="Completed" type="text">
-              <input hidden value="1" name="Checker" type="text">
-              <button type="submit" class="btn btn-primary">Completed</button>
-              </div>
-            </form>
-            <br> <br> <br>
-          <!-- </div> -->
-  
-          <!-- Agent Comment box Post-->
-          <div class="m-4">
-            <form action="/<%= clientCase._id%>" method="POST">
-            <div class="form-group">
-              <label ><h2>Question/Comment:</h2></label>
-              <!-- <textarea class="form-control" rows="5" id="comment"></textarea> -->
-              <input type="text" class="form-control" id="comment" name="AdminComment"  placeholder="Enter Your Comment">
-              <!-- <input type="text" hidden name="AdminComment" value="2"> -->
-            </div>
-            <button type="submit" class="btn btn-primary">Post</button>
-            <!-- <button onclick="window.location.href = '/addComment';" type="submit" class="btn btn-primary">Post</button> -->
-          </form>
-          </div>
-          <br> <br>
-          <!-- your comment -->
-          <div class="m-4" style="margin-bottom: 50px">
-            <h2>Your Comment:</h2>
-            <div class="border1" style="background-color: white;">
-    
-              <%= clientCase.AdminComment %>
-            </div>
-          </div>
-          
-          <!-- Agent Comment Box Post -->
-          <div class="m-4 " style="margin-bottom: 50px;">
-            <h2>Agent Comment:</h2>
-            <div class="border1" style="background-color: white;">
-    
-              <%= clientCase.AgentComment %>
-            </div>
-          </div>
-  
-  
-        </div>
-  
-  
-      </div>
+            <div class="top-nav clearfix">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img src="img/admin.JPG" alt="" style="padding: 4px; width: 40px; height: 40px;">
+                            <span class="username">Muzaffar</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li><a href="/adminchangepass"><i class="fas fa-lock-open"></i>Change Password</a></li>
+                            <li><a href="/adminlogout"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
 
-    <!-- <footer class="panel-footer"> -->
-      <!-- <div class="row"> -->
-        
-        <!-- <div class="col-sm-5 text-center">
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <div class="leftside-navigation">
+                    <ul class="sidebar-menu" id="nav-accordion">
+                        <li>
+                            <a href="/adminhome">
+                                <span>Statistics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/allagents">
+                                <span>Agent Information</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/caseinfo">
+                                <span>Cases</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="table-agile-info">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            case
+                        </div>
+                    </div>
+                    <!-- <div class="table-responsive container"> -->
+                    <div class="container-fluid mt-5">
+                        <div class=" mr-auto">
+                            <h3>Status:
+                                <%= clientCase.Status %>
+                            </h3>
+                            <br>
+                            <div class="profile" style="background-color: white;">
+                                <div class="border1">
+
+                                    <h2><u>Client Information</u>:</h2>
+                                    <br>
+                                    <h4>Client 1: &ensp; </h4>
+                                    <%= clientCase.name1 %> <br> <br>
+                                        <h4>Client 2: &ensp; </h4>
+                                        <%= clientCase.name2 %> <br> <br>
+                                            <h4>DOB: &ensp; </h4>
+                                            <%= clientCase.DOB %> <br> <br>
+                                                <h4>Policy Name: &ensp; </h4>
+                                                <%= clientCase.Policy %> <br> <br>
+                                                    <h4>Policy amount: &ensp; </h4>
+                                                    <%= clientCase.Amount %> <br> <br>
+                                                        <h4>Address: &ensp; </h4>
+                                                        <%= clientCase.Address %> <br> <br>
+                                                            <h4>Phone#: &ensp; </h4>
+                                                            <%= clientCase.PhoneNo %> <br> <br>
+                                                                <h4>Schedule Date: &ensp; </h4>
+                                                                <%= clientCase.ScheduledDate %> <br> <br>
+                                                                    <h4>Time: &ensp; </h4>
+                                                                    <%= clientCase.Time %> <br> <br>
+                                                                        <h4>Requirements:</h4>
+                                                                        <div style="padding-left: 3%;">
+                                                                            <ul>
+                                                                                <li>1.
+                                                                                    <%= clientCase.value1 %>
+                                                                                </li>
+                                                                                <li>2.
+                                                                                    <%= clientCase.value2 %>
+                                                                                </li>
+                                                                                <li>3.
+                                                                                    <%= clientCase.value3 %>
+                                                                                </li>
+                                                                                <li>4.
+                                                                                    <%= clientCase.value4 %>
+                                                                                </li>
+                                                                                <li>5.
+                                                                                    <%= clientCase.value5 %>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- <button type="button1" class="btn btn-primary">Edit profile</button> -->
+                                </div>
+                            </div>
+                            <form action="/<%= clientCase._id%>" method="POST">
+                                <br>
+                                <!-- <div class="btn-group"> -->
+                                <div class="col-sm-1">
+                                    <input name="Status" hidden value="Pending" type="text">
+                                    <input name="Checker" hidden value="1" type="text">
+                                    <button type="submit" class="btn btn-primary">Pending</button>
+                                </div>
+                            </form>
+                            <form action="/<%= clientCase._id%>" method="POST">
+                                <div class="col-sm-1">
+                                    <input hidden name="Status" value="Ongoing" type="text">
+                                    <input hidden value="1" name="Checker" type="text">
+                                    <button type="submit" class="btn btn-primary">OnGoing</button>
+                                </div>
+                            </form>
+                            <form action="/<%= clientCase._id%>" method="POST">
+                                <div class="col-sm-1">
+                                    <input hidden name="Status" value="Completed" type="text">
+                                    <input hidden value="1" name="Checker" type="text">
+                                    <button type="submit" class="btn btn-primary">Completed</button>
+                                </div>
+                            </form>
+                            <br> <br> <br>
+                            <!-- </div> -->
+
+                            <!-- Agent Comment box Post-->
+                            <div class="m-4">
+                                <form action="/<%= clientCase._id%>" method="POST">
+                                    <div class="form-group">
+                                        <label><h2>Question/Comment:</h2></label>
+                                        <!-- <textarea class="form-control" rows="5" id="comment"></textarea> -->
+                                        <input type="text" class="form-control" id="comment" name="AdminComment" placeholder="Enter Your Comment">
+                                        <!-- <input type="text" hidden name="AdminComment" value="2"> -->
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Post</button>
+                                    <!-- <button onclick="window.location.href = '/addComment';" type="submit" class="btn btn-primary">Post</button> -->
+                                </form>
+                            </div>
+                            <br> <br>
+                            <!-- your comment -->
+                            <div class="m-4" style="margin-bottom: 50px">
+                                <h2>Your Comment:</h2>
+                                <div class="border1" style="background-color: white;">
+
+                                    <%= clientCase.AdminComment %>
+                                </div>
+                            </div>
+
+                            <!-- Agent Comment Box Post -->
+                            <div class="m-4 " style="margin-bottom: 50px;">
+                                <h2>Agent Comment:</h2>
+                                <div class="border1" style="background-color: white;">
+
+                                    <%= clientCase.AgentComment %>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- <footer class="panel-footer"> -->
+                    <!-- <div class="row"> -->
+
+                    <!-- <div class="col-sm-5 text-center">
           <small class="text-muted inline m-t-sm m-b-sm">showing 10-20 of 50 items</small>
         </div>
         <div class="col-sm-7 text-right text-center-xs">                
@@ -206,23 +241,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
           </ul>
         </div> -->
-      <!-- </div> -->
-    <!-- </footer> -->
-  </div>
+                    <!-- </div> -->
+                    <!-- </footer> -->
+                </div>
 
-</section>
- <!-- footer -->
-		   <div class="footer">
-		  </div>
-  <!-- / footer -->
-</section>
-<!--main content end-->
-</section>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
-<script src="js/jquery.scrollTo.js"></script>
+            </section>
+            <!-- footer -->
+            <div class="footer">
+            </div>
+            <!-- / footer -->
+        </section>
+        <!--main content end-->
+    </section>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
 </body>
+
 </html>
