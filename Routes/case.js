@@ -102,7 +102,7 @@ app.post('/:id', verifyAnyone , async (req,res)=>{
         if(req.session.agentId)
         {
         await Case.findOneAndUpdate({_id:req.params.id},{AgentComment:req.body.AgentComment},{new: true});
-        res.redirect('/caseview');
+        res.redirect('/'+req.params.id);
         }
         else if (req.session.adminId)
         {
