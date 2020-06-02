@@ -128,7 +128,7 @@ app.post('/:id', verifyAnyone , async (req,res)=>{
                 }
             }
        
-        res.redirect('/caseinfo');
+        res.redirect('/'+req.params.id);
         }
         res.redirect('/');
     }
