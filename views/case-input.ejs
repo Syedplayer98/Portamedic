@@ -1,145 +1,141 @@
 <!doctype html>
 <html>
-
 <head>
-    <title>Kuick Exam</title>
-    <link rel="icon" href="img/title-logo.png" type="image/png">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Muzaffar.co</title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Untitled Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Untitled Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="content">
-        <div class="shadow bg-white ">
-            <nav class="navbar navbar-expand-sm navbar-light bg-light d-flex">
-                <a class="navbar-brand" href="Header.ejs">
-                    <img src="img/logo1.png">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<div class="shadow bg-white ">  
+  <nav class="navbar navbar-expand-sm navbar-light bg-light d-flex">
+    <a class="navbar-brand" href="Header.html">
+      <img src="img/logo.png" width="50" height="40"  class="d-inline-block " alt="">
+      <p class="text-align">We make lives better</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user"> </i> Agent login
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/logout">Logout</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tel:+62896706255135"><i class="fa fa-phone"></i> Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="d-flex">
-            <!-- Sidebar -->
-            <div class="bg-light border-right" id="sidebar-wrapper">
-
-                <div class="list-group list-group-flush">
-                    <a href="/landing" class="list-group-item list-group-item-action bg-light">Overview</a>
-                    <a href="/caseinput" class="list-group-item list-group-item-action bg-light">Add Case</a>
-                    <a href="/caseview" class="list-group-item list-group-item-action bg-light">View case</a>
-                    <a href="/profile" class="list-group-item list-group-item-action bg-light">Profile</a>
-                </div>
-            </div>
-            <!-- /#sidebar-wrapper -->
-
-            <div class="container-fluid">
-                <div class="form mr-auto pb-5">
-                    <h2>Enter client info: </h2>
-                    <form action="/add" method="POST">
-                        <div class="form-group ">
-                            <label>Client 1</label>
-                            <input type="text" class="form-control" id="client1" name="name1" placeholder="Enter Client Name">
-                        </div>
-                        <div class="form-group ">
-                            <label>Client 2 (Optional)</label>
-                            <input type="text" class="form-control" id="client2" name="name2" value="" placeholder="Enter Client Name">
-                        </div>
-
-                        <div class="form-group ">
-                            <label>DOB</label>
-                            <input type="Date" class="form-control" id="client-dob" name="DOB" placeholder="Enter Client DOB">
-                        </div>
-
-                        <div class="form-group ">
-                            <label>Policy Name</label>
-                            <input type="text" class="form-control" id="policy" name="Policy">
-                        </div>
-
-                        <div class="form-group ">
-                            <label>Policy amount</label>
-                            <input type="number" class="form-control" id="policy-ammount" name="Amount">
-                        </div>
-
-
-                        <div class="form-group ">
-                            <label>Address</label>
-                            <input type="address" class="form-control" id="exampleInputAddress" name="Address">
-
-                        </div>
-
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="phonenumber" class="form-control" id="phonenumber2" name="PhoneNo" aria-describedby="phonenumber" placeholder="Enter phonenumber">
-                        </div>
-
-                        <div class="form-group ">
-                            <label>Schedule date</label>
-                            <input type="Date" class="form-control" id="Schedule" name="ScheduledDate" placeholder="Enter schedule date">
-                        </div>
-                        <div class="form-group ">
-                            <label>Time</label>
-                            <input type="time" class="form-control" id="client-time" name="Time" placeholder="Enter time od schedule">
-                        </div>
-
-                        <h4>Requirements:</h4>
-
-                        <div class="form-group">
-                            <input type="checkbox" id="value1" name="value1" value="paramed">
-                            <label> PARAMED</label><br>
-                            <input type="checkbox" id="value2" name="value2" value="blood">
-                            <label> BLOOD</label><br>
-                            <input type="checkbox" id="value3" name="value3" value="urine">
-                            <label> URINE</label> <br>
-                            <input type="checkbox" id="value4" name="value4" value="ekg">
-                            <label> EKG</label> <br>
-                            <input type="checkbox" id="value5" name="value5" value="seniorSuppliment">
-                            <label> Senior Suppliment</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"> </i> Agent login
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/logout">Logout</a>  
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tel:+62896706255135"><i class="fa fa-phone"></i> Contact</a>
+        </li>
+      </ul>
     </div>
+  </nav>      
+</div>
+<div class="d-flex" >
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+      
+      <div class="list-group list-group-flush">
+        <a href="/landing" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="/caseinput" class="list-group-item list-group-item-action bg-light">Add Case</a>
+        <a href="/caseview" class="list-group-item list-group-item-action bg-light">View case</a>
+        <a href="/profile" class="list-group-item list-group-item-action bg-light">Profile</a>
+      </div>
+</div>
+    <!-- /#sidebar-wrapper -->  
+
+<div class="container-fluid">
+    <div class="form mr-auto pb-5">
+      <h2>Enter client info: </h2>
+      <form action="/add" method="POST">
+        <div class="form-group ">
+          <label>Client 1</label>
+          <input type="text" class="form-control" id="client1" name="name1" placeholder="Enter Client Name">
+        </div>
+        <div class="form-group ">
+          <label >Client 2 (Optional)</label>
+          <input type="text" class="form-control" id="client2" name="name2" value="" placeholder="Enter Client Name">
+        </div>
+        
+        <div class="form-group ">
+          <label >DOB</label>
+          <input type="Date" class="form-control" id="client-dob" name="DOB"  placeholder="Enter Client DOB">
+        </div>
+
+        <div class="form-group ">
+          <label >Policy Name</label>
+          <input type="text" class="form-control" id="policy" name="Policy" >
+        </div>
+
+        <div class="form-group ">
+          <label >Policy amount</label>
+          <input type="number" class="form-control" id="policy-ammount" name="Amount" >
+        </div>
+
+        
+        <div class="form-group ">
+          <label >Address</label>
+          <input type="address" class="form-control" id="exampleInputAddress" name="Address"  >
+          
+        </div>
+
+        <div class="form-group">
+          <label >Phone Number</label>
+          <input type="phonenumber" class="form-control" id="phonenumber2" name="PhoneNo" aria-describedby="phonenumber" placeholder="Enter phonenumber">
+        </div>
+
+        <div class="form-group ">
+          <label >Schedule date</label>
+          <input type="SDate" class="form-control" id="Schedule" name="ScheduledDate" placeholder="Enter schedule date">
+        </div>
+        <div class="form-group ">
+          <label >Time</label>
+          <input type="time" class="form-control" id="client-time" aria-help="AM/PM" pseudo="-webkit-datetime-edit-ampm-field" name="Time" placeholder="Enter time od schedule">
+        </div>
+
+        <h4>Requirements:</h4>
+
+       <div class="form-group">
+         <input type="checkbox" id="value1" name="value1" value="paramed">
+         <label > PARAMED</label><br>
+         <input type="checkbox" id="value2" name="value2" value="blood">
+         <label > BLOOD</label><br>
+         <input type="checkbox" id="value3" name="value3" value="urine">
+         <label > URINE</label> <br>
+        <input type="checkbox" id="value4" name="value4" value="ekg">
+        <label > EKG</label> <br>
+        <input type="checkbox" id="value5" name="value5" value="seniorSuppliment">
+        <label > Senior Suppliment</label>
+       </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+      </div>
+</div>
 
 
-    <!-- footer part start-->
+
+<!-- footer part start-->
     <footer class="footer-area margin:">
-
-        <div class="copyright_part">
+                  
+      <div class="copyright_part">
             <div class="container">
                 <div class="row align-items-center">
                     <p class="footer-text m-0 col-lg-8 col-md-12">
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> All rights reserved <i class="ti-heart" aria-hidden="true"></i> </p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="ti-heart" aria-hidden="true"></i>  </p>
                     <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i> </a>
@@ -151,5 +147,4 @@
         </div>
     </footer>
 </body>
-
 </html>
